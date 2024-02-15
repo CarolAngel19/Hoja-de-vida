@@ -1,5 +1,4 @@
-/*
-document.getElementById('addSkill').addEventListener('click', function() {
+function agregarHabilidad() {
     let newSkill = prompt("Introduce una nueva habilidad:");
     let newLevel = prompt("Introduce el nivel de la habilidad (Básico, Intermedio, Avanzado):");
 
@@ -13,21 +12,11 @@ document.getElementById('addSkill').addEventListener('click', function() {
         cell1.textContent = newSkill;
         cell2.textContent = newLevel;
     }
-});
+}
 
-
-document.getElementById('contactButton').addEventListener('click', function() {
-    let userEmail = prompt("Por favor, introduce tu correo electrónico:");
-    if (userEmail) {
-        alert("Gracias " + userEmail + ", me pondré en contacto contigo pronto!");
-    }
-});
-
-//Añadiendo Dinamismo con Ciclos
-
-const certificaciones = ["Curso A", "Curso B", "Taller C", "Seminario D"];
-
+// Función para mostrar certificaciones
 function mostrarCertificaciones() {
+    const certificaciones = ["Bachiller", "Tecnico", "Tecnologo", "Bootcamp"];
     let ul = document.getElementById('listaCertificaciones');
 
     for (let i = 0; i < certificaciones.length; i++) {
@@ -37,22 +26,6 @@ function mostrarCertificaciones() {
     }
 }
 
-window.onload = mostrarCertificaciones;
-
-// Agrega el evento al botón "Ver Proyectos Anteriores"
-document.getElementById('viewProjectsButton').addEventListener('click', function() {
-    let numProjects = prompt("¿Cuántos proyectos deseas ver?");
-    
-    if (numProjects) {
-        numProjects = parseInt(numProjects);
-        if (!isNaN(numProjects)) {
-            showProjects(numProjects);
-        } else {
-            alert("Por favor, ingresa un número válido.");
-        }
-    }
-});
-
 // Función para mostrar la cantidad de proyectos solicitados
 function showProjects(numProjects) {
     let projectsList = document.querySelectorAll('.projects li');
@@ -61,4 +34,50 @@ function showProjects(numProjects) {
         alert("Proyecto " + (i + 1) + ": " + projectsList[i].textContent);
     }
 }
-*/
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('addSkill').addEventListener('click', agregarHabilidad);
+    
+    document.getElementById('viewProjectsButton').addEventListener('click', function() {
+        let numProjects = prompt("¿Cuántos proyectos deseas ver?");
+        
+        if (numProjects) {
+            numProjects = parseInt(numProjects);
+            if (!isNaN(numProjects)) {
+                showProjects(numProjects);
+            } else {
+                alert("Por favor, ingresa un número válido.");
+            }
+        }
+    });
+    
+    // Mostrar certificaciones
+    mostrarCertificaciones();
+
+    // Manejar el envío del formulario de contacto
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evitar que el formulario se envíe
+
+        // Obtener los valores del formulario
+        let userName = document.getElementById('nombre').value;
+        let userEmail = document.getElementById('email').value;
+
+        // Mostrar la pantalla emergente de agradecimiento
+        alert("Gracias " + userName + ", me pondré en contacto contigo pronto!");
+    });
+
+    // Manejar el clic en el botón de contacto
+    document.getElementById('contactButton').addEventListener('click', function() {
+        // Pedir nombre y correo electrónico
+        let userName = prompt("Por favor, introduce tu nombre:");
+        let userEmail = prompt("Por favor, introduce tu correo electrónico:");
+
+        // Mostrar la pantalla emergente de agradecimiento
+        alert("Gracias " + userName + ", me pondré en contacto contigo pronto!");
+    });
+});
+
+const calificarHojaDeVida = () => {
+    let calificacion = prompt("Del 1 al 10, ¿cómo calificarías mi hoja de vida?");
+    alert(`¡Gracias por calificar con un ${calificacion}!`);
+}

@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-
     <title>Mi hoja de vida</title>
 </head>
 <body>
@@ -14,165 +13,100 @@
         <p>Email: angelcarol487@gmail.com</p>
         <p>Teléfono: 3174056552</p>
         <p>Ubicación: Bogota, Colombia</p>
-        <p><a href="URL_GITHUB" target="_blank">Perfil GitHub</a></p>
-        <p><a href="URL_LINKEDIN" target="_blank">Perfil LinkedIn</a></p>
+        <p><a href="https://github.com/CarolAngel19" target="_blank">Perfil GitHub</a></p>
+        <p><a href="https://www.linkedin.com/in/carol-vanessa-angel-franco-b6b229236/" target="_blank">Perfil LinkedIn</a></p>
     </header>
 
-    <aside>
-        <h2>Perfil</h2>
-        <p>
-            Tecnóloga en Análisis y Desarrollo de Sistemas de Información, con la capacidad de asistir con mis conocimientos en el área de tecnología, conocimientos técnicos en programación
-            con la aptitud para aprender nuevas tecnologías; conocimientos en HTML, CSS, MySQL, PHP, Java, JavaScript, análisis de sistemas, con la capacidad de acoplarme al ambiente
-            laboral en el que me desempeñe.
+
+    <div class="container text-center">
+        <div class="row">
             
-            Me considero una persona activa, colaboradora, puntual, honesta, responsable, con buenas relaciones interpersonales, me destaco en mi área de interés como lo son la informática,
-            tengo la facilidad de aprender rápidamente, estoy siempre en la disposición de aprender cosas nuevas.
-        </p>
-    </aside>
+            <div class="col-5">
+                <aside>
+                    <h2>Perfil</h2>
+                    <p>
+                        Tecnóloga en Análisis y Desarrollo de Sistemas de Información, con la capacidad de asistir con mis conocimientos en el área de tecnología, conocimientos técnicos en programación
+                        con la aptitud para aprender nuevas tecnologías; conocimientos en HTML, CSS, MySQL, PHP, Java, JavaScript, análisis de sistemas, con la capacidad de acoplarme al ambiente
+                        laboral en el que me desempeñe.
+                        
+                        Me considero una persona activa, colaboradora, puntual, honesta, responsable, con buenas relaciones interpersonales, me destaco en mi área de interés como lo son la informática,
+                        tengo la facilidad de aprender rápidamente, estoy siempre en la disposición de aprender cosas nuevas.
+                    </p>
 
-    <main>
-        
-        <h2>Experiencia</h2>
-        <ul>
-            <li>2020-2023: Desarrollador Full Stack en XYZ Corp</li>
-            <li>2019: Interno en ABC Tech</li>
-        </ul>
+                    <h2>Experiencia</h2>
+                    <ul>
+                        <li>2023-2024: Desarrollador Full Stack Angular - Java</li>
+                        <li>2020: Accedo Colombia S.A.S</li>
+                    </ul>
 
-        <h2 >Habilidades Técnicas</h2>
-        <table id="skillsTable">
-            <tr>
-                <th>Habilidad</th>
-                <th>Nivel</th>
-            </tr>
-            <tr>
-                <td>JavaScript</td>
-                <td>Intermedio</td>
-            </tr>
-
-        </table>
-        <button onclick="saludoPersonalizado()" id="addSkill">Añadir Habilidad</button>
-
-
-        <h2>Mis Proyectos</h2>
-        <ul class="projects">
-            <li><a href="detalle-proyecto.html">Primer Proyecto</a></li>
-            <li><a href="#">Segundo Proyecto</a></li>
-            <li><a href="#">Tercero Proyecto</a></li>
-            <li><a href="#">Cuarto Proyecto</a></li>
-        </ul>
-
-        <!-- Agrega el botón "Ver Proyectos Anteriores" -->
-        <button onclick="saludoPersonalizado()" id="viewProjectsButton">Ver Proyectos Anteriores</button>
-
-        <h2>Intereses</h2>
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-        </ul>
-
-        <h2>Certificados</h2>
-        <ul id="listaCertificaciones">
+                    <h2>Certificados</h2>
+                    <ul id="listaCertificaciones">
+                        
+                    </ul>
+                </aside>
+            </div>
             
-        </ul>
-
-    </main>
+            <div class="col-7">
+                <main>
+                    <h2 >Habilidades Técnicas</h2>
+                    <table id="skillsTable">
+                        <tr>
+                            <th>Habilidad</th>
+                            <th>Nivel</th>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>Intermedio</td>
+                        </tr>
+            
+                    </table>
+                    <button id="addSkill">Añadir Habilidad</button>
+            
+            
+                    <h2 class="subtitle">Mis Proyectos</h2>
+                    <ul class="projects">
+                        <li><a href="detalle-proyecto.html">Sistema para Veterinaria</a></li>
+                        <li><a href="detalle-proyecto.html">Klipclub</a></li>
+                        <li><a href="detalle-proyecto.html">Sistemas de Reservas</a></li>
+                        <li><a href="detalle-proyecto.html">Sistemas de Ventas</a></li>
+                    </ul>
+            
+                    <!-- Agrega el botón "Ver Proyectos Anteriores" -->
+                    <button id="viewProjectsButton">Ver Proyectos Anteriores</button>
+            
+                    <h2 class="subtitle">Intereses</h2>
+                    <ul class="interests">
+                        <li>Desarrollo FrontEnd</li>
+                        <li>Ver Documentales</li>
+                        <li>Jugar Baloncesto</li>
+                    </ul>
+                </main>   
+            </div>
         
+            <div>
+                <form id="contactForm" action="#" method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="user_nombre">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="user_email">
+                
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="user_message"></textarea>
+                
+                    <input type="submit" value="Contactar">
+                </form>
+                <button id="contactButton" class="button-contact">Contactar</button>
+                <button onclick="calificarHojaDeVida()" class="button-rate">Calificar Hoja de Vida</button>
+            </div>
+        </div>
+    </div>
+            
     <footer>
-        <form action="#" method="post">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="user_email">
-         
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="user_message"></textarea>
-         
-            <input type="submit" value="Contactar">
-         </form>
-         <button id="contactButton">Contactar</button>
-         <button onclick="calificarHojaDeVida()">Calificar Hoja de Vida</button>
+        <h6>© 2024 Carol Angel</h6>
     </footer>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-
-<script>
-    function agregarHabilidad() {
-        let newSkill = prompt("Introduce una nueva habilidad:");
-        let newLevel = prompt("Introduce el nivel de la habilidad (Básico, Intermedio, Avanzado):");
-
-        if (newSkill && newLevel) {
-            let table = document.getElementById('skillsTable');
-            let newRow = table.insertRow(table.rows.length);
-
-            let cell1 = newRow.insertCell(0);
-            let cell2 = newRow.insertCell(1);
-
-            cell1.textContent = newSkill;
-            cell2.textContent = newLevel;
-        }
-    }
-    document.getElementById('addSkill').addEventListener('click', agregarHabilidad);
-
-
-    document.getElementById('contactButton').addEventListener('click', function() {
-        let userEmail = prompt("Por favor, introduce tu correo electrónico:");
-        if (userEmail) {
-            alert("Gracias " + userEmail + ", me pondré en contacto contigo pronto!");
-        }
-    });
-
-    //Añadiendo Dinamismo con Ciclos
-
-    const certificaciones = ["Curso A", "Curso B", "Taller C", "Seminario D"];
-
-    function mostrarCertificaciones() {
-        let ul = document.getElementById('listaCertificaciones');
-
-        for (let i = 0; i < certificaciones.length; i++) {
-            let li = document.createElement('li');
-            li.textContent = certificaciones[i];
-            ul.appendChild(li);
-        }
-    }
-
-    window.onload = mostrarCertificaciones;
-
-    // Agrega el evento al botón "Ver Proyectos Anteriores"
-    document.getElementById('viewProjectsButton').addEventListener('click', function() {
-        let numProjects = prompt("¿Cuántos proyectos deseas ver?");
-        
-        if (numProjects) {
-            numProjects = parseInt(numProjects);
-            if (!isNaN(numProjects)) {
-                showProjects(numProjects);
-            } else {
-                alert("Por favor, ingresa un número válido.");
-            }
-        }
-    });
-
-    // Función para mostrar la cantidad de proyectos solicitados
-    function showProjects(numProjects) {
-        let projectsList = document.querySelectorAll('.projects li');
-
-        for (let i = 0; i < numProjects && i < projectsList.length; i++) {
-            alert("Proyecto " + (i + 1) + ": " + projectsList[i].textContent);
-        }
-    }
-
-    const saludoPersonalizado = () => {
-        alert("¡Gracias por visitar esta sección!");
-    }
-
-    //funcion calificar hoja de vida
-    const calificarHojaDeVida = () => {
-        let calificacion = prompt("Del 1 al 10, ¿cómo calificarías mi hoja de vida?");
-        alert(`¡Gracias por calificar con un ${calificacion}!`);
-    }
-
-</script>
-
-
-
-
